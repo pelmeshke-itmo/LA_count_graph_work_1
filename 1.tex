@@ -21,14 +21,15 @@
     e_5 = t^2 + t^4\qquad$
 \end{enumerate}
 \vspace{10mm}
-\noindent\textbf{Решение.}\\
+\noindent\textbf{Решение.}
 \begin{enumerate}
     \item Для каждой матрицы $2 \times 2$ вида
-	$A_i = \begin{pmatrix}a_{i, 1} & a_{i, 2} \\ a_{i, 3} & a_{i, 4}\end{pmatrix}\qquad$
-	сделаем переобозначение элементов в вектор $1 \times 4$:
+	$A_i = \begin{pmatrix}a_{i, 1} & a_{i, 2} \\ a_{i, 3} & a_{i, 4}\end{pmatrix}$
+	сделаем переобозначение элементов в вектор длиной 4:
 	$A_i = \begin{pmatrix}a_{i, 1} & a_{i,2} & a_{i,3} & a_{i,4}\end{pmatrix}$
 
-	Теперь чтобы доказать, что $A = \Set{A_1, A_2, A_3, A_4}$ - базис, нужно показать что $A$ линейно независима и ее ранг равен 4 ( т.к. в матрице 2 на 2 у нас 4 элемента ).
+	Теперь, чтобы доказать, что $A = \Set{A_1, A_2, A_3, A_4}$ - базис,
+	нужно показать что $A$ линейно независима и ее ранг равен 4 (т.к. в матрице 2 на 2 у нас 4 элемента).
 
 	$\begin{pmatrix}
 	a_{1, 1} & a_{1,2} & a_{1,3} & a_{1,4}\\
@@ -81,77 +82,79 @@
 	0 & 0 & 0 & 1\\
 	\end{pmatrix}\qquad $
 
-	В ступенчатом виде 4 строчки. Значит что ранг 4. Получается что $A$ - базис для матриц второго порядка.
+	В ступенчатом виде 4 строчки. Значит, что ранг 4.
+	Получается, что $A$ - базис для матриц второго порядка.
 
-	$x = \begin{pmatrix}-3 & -6 & 0 & 2\end{pmatrix} = x*A_1 + y*A_2 + z*A_3 + n*A_4$,
-	где $x,y,z,n$ - координаты элемента $x$ в базисе $A$. Запишем систему уравнений где в $i$ - ой строке будет соответствующая координата в нашей матрице ( переобозначеном векторе ).
+	$x = \begin{pmatrix}-3 & -6 & 0 & 2\end{pmatrix} = w*A_1 + y*A_2 + z*A_3 + n*A_4$,
+	где $w,y,z,n$ - координаты элемента $x$ в базисе $A$.
+	Запишем систему уравнений, где в $i$-ой строке будет соответствующая координата в нашей матрице (переобозначеном векторе).
 
 	\begin{multicols}{2}
 	$ \begin{cases}
-	2x -2y + 0z + n = -3\\
-	2x + 3y + z -3n = -6\\
-	3x + 4y - z + 2n = 0\\
-	x + 3y + z - n = 2\\
+	2w -2y + 0z + n = -3\\
+	2w + 3y + z -3n = -6\\
+	3w + 4y - z + 2n = 0\\
+	w + 3y + z - n = 2\\
 	\end{cases} \Longleftrightarrow $
 
 	$ \begin{cases}
-	x + 3y + z - n = 2 \\
-	2x -2y + 0z + n = -3\\
-	2x + 3y + z -3n = -6\\
-	3x + 4y - z + 2n = 0\\
+	w + 3y + z - n = 2 \\
+	2w -2y + 0z + n = -3\\
+	2w + 3y + z -3n = -6\\
+	3w + 4y - z + 2n = 0\\
 	\end{cases} \Longleftrightarrow  $
 
 	$ \begin{cases}
-	x + 3y + z - n = 2 \\
+	w + 3y + z - n = 2 \\
 	 -8y - 2z + 3n = -7\\
 	 -3y -z -n = -10\\
 	  -5y - 4z + 5n = -6\\
 	\end{cases}  \Longleftrightarrow $
 
 	$ \begin{cases}
-	x + 3y + z - n = 2 \\
+	w + 3y + z - n = 2 \\
 	 -8*15y - 15*2z + 15*3n = -15*7\\
 	 -3*40y -40z -40n = -400\\
 	  -5*24y - 4*24z + 5*24n = -6*24\\
 	\end{cases}  \Longleftrightarrow $
 
 	$ \begin{cases}
-	x + 3y + z - n = 2 \\
+	w + 3y + z - n = 2 \\
 	 -8*15y - 15*2z + 15*3n = -15*7\\
 	 3*40y +40z +40n = 400\\
 	  5*24y + 4*24z - 5*24n = 6*24\\
 	\end{cases}  \Longleftrightarrow $
 
 	$ \begin{cases}
-	x + 3y + z - n = 2 \\
+	w + 3y + z - n = 2 \\
 	 -8*15y - 15*2z + 15*3n = -15*7\\
 	 10z +85n = 295\\
 	  66z - 75n = 39\\
 	\end{cases}  \Longleftrightarrow $
 
 	$ \begin{cases}
-	x + 3y + z - n = 2 \\
+	w + 3y + z - n = 2 \\
 	 -8*15y - 15*2z + 15*3n = -15*7\\
 	  2z +17n = 59\\
 	  22z - 25n = 13\\
 	\end{cases}  \Longleftrightarrow $
 
 	$ \begin{cases}
-	x + 3y + z - n = 2 \\
+	w + 3y + z - n = 2 \\
 	 -8*15y - 15*2z + 15*3n = -15*7\\
 	  -22z -17*11n = -59*11\\
 	  22z - 25n = 13\\
 	\end{cases}  \Longleftrightarrow $
 
 	$ \begin{cases}
-	x + 3y + z - n = 2 \\
+	w + 3y + z - n = 2 \\
 	 -8*15y - 15*2z + 15*3n = -15*7\\
 	  -22z -17*11n = -59*11\\
 	   - 212n = -636\\
 	\end{cases}  \Longleftrightarrow $
 
 	$ \begin{cases}
-	x = -2 \\
+	w = -2 \\
 	 y = 1\\
 	  z = 4\\
 	   n =3\\
@@ -160,7 +163,7 @@
 
 	\end{multicols}
 
-	Ответ: $x = -2A_1 + A_2 + 4A_3 + 3A_4$.
+	\textit{Ответ}: $x = -2A_1 + A_2 + 4A_3 + 3A_4$.
 
     \item $\forall P_n \ (n \leq 4) \ \exists! (a, b, c, d, e) : P(x) = a + bx + cx^2 + dx^3 + ex^4$ -
     существует биекция между пространством полиномов степени $\leq 4$ и векторов размерностью 5.\\
