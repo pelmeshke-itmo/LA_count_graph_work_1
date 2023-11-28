@@ -22,6 +22,57 @@
 \end{enumerate}
 \vspace{10mm}
 \noindent\textbf{Решение.}\\
-It is empty but you can fill it!!!
+\begin{enumerate}
+    \item $L$ - пространство матриц второго порядка\\
+    $\displaystyle A = \Set{A_1, A_2, A_3, A_4}\\
+    A_1 = \begin{pmatrix}2 & 2 \\ 3 & 1\end{pmatrix}\qquad
+    A_2 = \begin{pmatrix}-2 & 3 \\ 4 & 3\end{pmatrix}\qquad
+    A_3 = \begin{pmatrix}0 & 1 \\ -1 & 1\end{pmatrix}\qquad
+    A_4 = \begin{pmatrix}1 & -3 \\ 2 & -1\end{pmatrix}\\
+    x = \begin{pmatrix}-3 & -6 \\ 0 & 2\end{pmatrix}$
+    \item $\forall P_n \ (n \leq 4) \ \exists! (a, b, c, d, e) : P(x) = a + bx + cx^2 + dx^3 + ex^4$ -
+    существует биекция между пространством полиномов степени $\leq 4$ и векторов размерностью 5.\\
+    Сопоставим каждому полиному $e_1 \mathellipsis e_5$ вектора $V_1 \mathellipsis V_5$:\\
+    \begin{align*}
+    e_1 = 1 + t \quad &\implies \quad V_1 = (1; 1; 0; 0; 0)\\
+    e_2 = t + t^2 \quad &\implies \quad V_2 = (0; 1; 1; 0; 0)\\
+    e_3 = t^2 + t^3 \quad &\implies \quad V_3 = (0; 0; 1; 1; 0)\\
+    e_4 = t + t^3 \quad &\implies \quad V_4 = (0; 1; 0; 1; 0)\\
+    e_5 = t^2 + t^4 \quad &\implies \quad V_5 = (0; 0; 1; 0; 1)\\
+    \end{align*}
+
+    $\displaystyle V = \Set{V_i}_{i = 1..5} =
+    \begin{pmatrix}1 & 0 & 0 & 0 & 0 \\ 1 & 1 & 0 & 1 & 0 \\ 0 & 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1\end{pmatrix}
+    \quad\sim\quad
+    \begin{pmatrix}1 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1\end{pmatrix}
+    \quad\sim\quad
+    \begin{pmatrix}1 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 1 & -1 & 1 \\ 0 & 0 & 0 & 2 & -1 \\ 0 & 0 & 0 & 0 & 1\end{pmatrix}$
+    \quad-\quad ступенчатый вид
+
+    $\begin{pmatrix}1 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1\end{pmatrix}$
+    \quad-\quad канонический вид
+
+    Ступенчатый и канонические виды матрицы не имеют нулевых строк, поэтому система $V$ линейно зависима,
+    а так как между $V$ и $A$ существует биекция, то и $A$ линейно зависима и образует базис
+
+    Представим $x$ в базисе $V$ как $y$:
+
+    $x = t^4 - t^3 + t^2 - t + 1 = x_1 e_1 + x_2 e_2 + x_3 e_3 + x_4 e_4 + x_5 e_5 \quad\sim\quad y = \begin{pmatrix}1 \\ -1 \\ 1 \\ -1 \\ 1\end{pmatrix}$\\
+    $(V|y) = \begin{pmatrix}1 & 0 & 0 & 0 & 0 \\ 1 & 1 & 0 & 1 & 0 \\ 0 & 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1\end{pmatrix}\begin{pmatrix}1 \\ -1 \\ 1 \\ -1 \\ 1\end{pmatrix}
+    \quad\sim\quad
+    \begin{pmatrix}1 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1\end{pmatrix}\begin{pmatrix}1 \\ -2 \\ 1 \\ -1 \\ 1\end{pmatrix}
+    \quad\sim\quad
+    \begin{pmatrix}1 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 1 & -1 & 1 \\ 0 & 0 & 0 & 2 & -1 \\ 0 & 0 & 0 & 0 & 1\end{pmatrix}\begin{pmatrix}1 \\ -2 \\ 3 \\ -4 \\ 1\end{pmatrix}$
+
+    $\displaystyle x_5 = \frac{1}{1} = 1;\\
+    2x_4 - x_5 = -4 \implies x_4 = -\frac{3}{2}\\
+    x_3 - x_4 + x_5 = 3 \implies x_3 = \frac{1}{2}\\
+    x_2 + x_4 = -2 \implies x_2 = -\frac{1}{2}\\
+    x_1 = 1$
+
+    Таким образом, в базисе $A$ $\displaystyle x = e_1 - \frac{e_2}{2} + \frac{e_3}{2} - \frac{3e_4}{2} + e_5$
+
+    \textit{Ответ}: $A$ - это базис, в базисе $A$ $\displaystyle x = e_1 - \frac{e_2}{2} + \frac{e_3}{2} - \frac{3e_4}{2} + e_5$.
+\end{enumerate}
 
 \clearpage
