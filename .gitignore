@@ -1,3 +1,7 @@
 /out
 /auxil
 /.idea
+/.vs
+*.log
+*.aux
+*.toc
